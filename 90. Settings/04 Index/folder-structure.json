@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "description": "Canonical folder structure of GoBeromsu/Obsidian-template. Adopting vaults enforce the exact root set and the presence of every declared folder.",
+  "description": "Canonical folder structure of Xia-Ataraxia/obsidian-vault-template. Adopting vaults enforce the exact root set and the presence of every declared folder.",
   "roots": [
     "00. Inbox",
     "10. Time",

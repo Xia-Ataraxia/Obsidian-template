@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Obsidian Template</h1>
+  <h1>Obsidian Vault Template</h1>
   <p><strong>A home for your notes. A system for your thinking.</strong></p>
   <p>PARA organization, Zettelkasten thinking, and periodic planning — with shared rules for humans and AI agents.</p>
   <p>
@@ -26,7 +26,8 @@
   </p>
 </div>
 
-## Less organizing. More connecting.
+## Features
+
 
 Start with a working structure, not someone else's personal notes. Download the ZIP, open the folder as a **new** vault, and write ordinary Markdown — Git and community plugins are optional until you need them. Give each note one canonical home, connect ideas across projects, and plan from year to day. Humans and agents share the same placement rules.
 
@@ -35,7 +36,6 @@ Start with a working structure, not someone else's personal notes. Download the 
 - **A planning chain that matches review.** Folder numbers are labels; the hierarchy is the period chain.
 - **Portable on purpose.** Personal notes, credentials, plugin caches, theme binaries, and machine-specific state are not included. Templater, Homepage, Omnisearch, Excalidraw, Outliner, and Linter ship as plugin binaries so they can be enabled after opening the vault and turning off Restricted Mode.
 
-## Features
 
 | Feature | What you get |
 | --- | --- |
@@ -47,7 +47,7 @@ Start with a working structure, not someone else's personal notes. Download the 
 | Agent Skills | One vendored `obsidian` skill; works in Claude Code, Codex, and Antigravity |
 | Empty placeholders | Home and index folders are yours to fill. `90. Settings/05 Bases` ships example `Video.base` and `Books.base`, and `85. Raw/02 Videos` ships one real video note so `Video.base` renders a card immediately. Root `Home.md` is your first table of contents and opens on startup |
 
-## Capture to work
+### Capture to work
 
 This is a filing model, not an automatic pipeline. Nothing here moves notes for you. Gemini on the web does not get automatic access to this vault.
 
@@ -55,7 +55,7 @@ This is a filing model, not an automatic pipeline. Nothing here moves notes for 
 
 Keep captured originals in Raw regardless of collector. Create work under a project or area only when the note has an owner. Read [Folders and Placement](90.%20Settings/01%20Guideline/01.%20Folders%20and%20Placement.md) before filing the first note. For writing with a public AI chat, see [Writing and AI](90.%20Settings/01%20Guideline/08.%20Writing%20and%20AI.md).
 
-## Roots
+### Roots
 
 Twelve roots are shipped. `25. Digital Garden` and `60. Saint` ship empty.
 
@@ -76,7 +76,7 @@ Twelve roots are shipped. `25. Digital Garden` and `60. Saint` ship empty.
 
 `90. Settings/07 Excalidraw` is the canonical folder for drawings and assets.
 
-## Time
+### Time
 
 Planning hierarchy: **Year → Quarter → Month → Week → Day**. Folder numbers are not that hierarchy.
 
@@ -84,7 +84,9 @@ Daily titles are `YYYY-MM-DD`. Weekly titles are ISO week year `GGGG-WW` plus `W
 
 Task notes use `manual/task.template.md` fields `type`, `done`, `gtd`, `project`, `plan`, and `due` (plus date stamps) so Dashboard queries can match them. Formats, ISO weeks, engine mapping, and those fields: [Folders and Placement](90.%20Settings/01%20Guideline/01.%20Folders%20and%20Placement.md) · [Templates](90.%20Settings/02%20Templates/README.md) **Engine setup**.
 
-## Quick start
+## Installation
+
+### Quick start
 
 1. **Download ZIP (no Git required)**
 
@@ -97,7 +99,7 @@ Task notes use `manual/task.template.md` fields `type`, `done`, `gtd`, `project`
 2. **Optional: clone with Git**
 
    ```sh
-   git clone https://github.com/GoBeromsu/Obsidian-template.git
+   git clone https://github.com/Xia-Ataraxia/obsidian-vault-template.git
    ```
 
    Open the cloned folder as a new vault the same way. Copying the directory works the same way.
@@ -116,7 +118,9 @@ Task notes use `manual/task.template.md` fields `type`, `done`, `gtd`, `project`
 
 These steps are setup instructions, not a claim that periodic creation, Bases views, or theme appearance were end-to-end verified in Obsidian.
 
-## First lesson
+## Usage
+
+### First lesson
 
 One short path after the vault is open. Details: [Writing and AI](90.%20Settings/01%20Guideline/08.%20Writing%20and%20AI.md).
 
@@ -130,11 +134,11 @@ One short path after the vault is open. Details: [Writing and AI](90.%20Settings
 
 Treat filled `Me.md` and any linked notes as private. They are **not automatically excluded from Git or sharing**; do not push them to a public repository.
 
-### Three files, three roles
+#### Three files, three roles
 
 [`Me.md`](Me.md) holds your identity and preferences as a person. [`AGENTS.md`](AGENTS.md) holds this repository's rules. [`CLAUDE.md`](CLAUDE.md) is a simple pointer to those two files; it does not duplicate either one's content. Agents read root `Me.md` first for user context, then the applicable `AGENTS.md` contract. Reading `Me.md` does not grant automatic integration or expanded authorization, and an empty section is unfilled and unknown, not a fact about the adopter.
 
-## Agent guidelines
+### Agent guidelines
 
 Read the nearest contract before creating or moving a note. README, `08. Writing and AI`, and `09. Agent Skills` ship as English/Korean pairs; neither language outranks the other. The eleven operational guides are single-language.
 
@@ -149,7 +153,7 @@ Read the nearest contract before creating or moving a note. README, `08. Writing
 | [Settings](90.%20Settings/AGENTS.md) | Placement SSOT, empty home/index/bases, settings-layer rules |
 | [Templates](90.%20Settings/02%20Templates/AGENTS.md) | `auto/` vs `manual/`, title formats, navigation vs creation |
 
-## Guidelines
+### Guidelines
 
 Operational guides live in [`90. Settings/01 Guideline/`](90.%20Settings/01%20Guideline/). They are single-language. Guideline number `07` is intentionally absent (machine-specific).
 
@@ -190,3 +194,16 @@ The shipped Daily template can create missing dashboards for yesterday, today, a
 Core Daily notes is enabled and creates daily files only.
 
 </details>
+
+## Development
+
+`scripts/verify_structure.py` checks the vault against the canonical folder declaration in `90. Settings/04 Index/folder-structure.json` (dependency-free Python 3):
+
+```sh
+python3 scripts/verify_structure.py           # adopter check
+python3 scripts/verify_structure.py --strict  # template self-check
+```
+
+## License
+
+No LICENSE file is present in this repository yet.

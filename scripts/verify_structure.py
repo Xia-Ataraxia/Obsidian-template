@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Enforce the canonical Obsidian-template folder structure.
+"""Enforce the canonical obsidian-vault-template folder structure.
 
 The declaration lives in `90. Settings/04 Index/folder-structure.json`. It is the
 contract an adopting vault enforces against, so it must never drift from the tree
