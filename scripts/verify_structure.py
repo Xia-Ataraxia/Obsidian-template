@@ -15,6 +15,17 @@ Two modes:
              every declared folder must exist. Extra subfolders are allowed:
              an adopting vault organizes its own content underneath the roots.
 
+Not every adopter wants every root. A company vault has no use for a personal
+devotional root, and forcing it to carry one would make "enforced" mean "cloned".
+An adopter may therefore declare omissions in
+`90. Settings/04 Index/folder-structure-exceptions.json`, each with a reason.
+Omitting a folder covers everything beneath it. The declaration stays the
+contract: an omission that nobody wrote down still fails, and an omission that
+no longer matches reality is reported so the file cannot rot.
+
+Exceptions never apply in --strict. The template cannot except itself from the
+structure it publishes.
+
 Dependency-free on purpose: a vault is not a Python project, and this has to run
 in any adopter's CI without installing anything.
 """
@@ -28,7 +39,40 @@ import sys
 from pathlib import Path
 
 DECLARATION = Path("90. Settings/04 Index/folder-structure.json")
+EXCEPTIONS = Path("90. Settings/04 Index/folder-structure-exceptions.json")
 NUMBERED_ROOT = re.compile(r"^\d+\. ")
+
+
+def load_exceptions(root: Path) -> tuple[dict[str, str], list[str]]:
+    """Return ({omitted path: reason}, errors). Absent file means no omissions."""
+    path = root / EXCEPTIONS
+    if not path.exists():
+        return {}, []
+    try:
+        document = json.loads(path.read_text(encoding="utf-8"))
+    except json.JSONDecodeError as exc:
+        return {}, [f"malformed structure exceptions: {exc}"]
+
+    omissions: dict[str, str] = {}
+    errors: list[str] = []
+    for entry in document.get("omissions", []):
+        omitted = entry.get("path")
+        reason = (entry.get("reason") or "").strip()
+        if not omitted:
+            errors.append("structure exception entry has no path")
+            continue
+        if not reason:
+            errors.append(f"structure exception has no reason: {omitted}")
+            continue
+        omissions[omitted] = reason
+    return omissions, errors
+
+
+def is_omitted(path: str, omissions: dict[str, str]) -> bool:
+    """An omitted folder covers everything beneath it."""
+    if path in omissions:
+        return True
+    return any(path.startswith(f"{omitted}/") for omitted in omissions)
 
 
 def tracked_folders(root: Path) -> tuple[set[str], set[str]]:
@@ -74,13 +118,30 @@ def verify(root: Path, strict: bool) -> list[str]:
     if not declared_roots:
         errors.append("structure declaration lists no roots")
 
+    if strict:
+        omissions: dict[str, str] = {}
+        if (root / EXCEPTIONS).exists():
+            errors.append("the template may not except itself from its own structure")
+    else:
+        omissions, exception_errors = load_exceptions(root)
+        errors.extend(exception_errors)
+        for omitted in sorted(omissions):
+            if omitted not in declared_roots and omitted not in declared_folders:
+                errors.append(f"structure exception names an undeclared path: {omitted}")
+            elif (root / omitted).is_dir():
+                errors.append(f"structure exception is stale, the path exists: {omitted}")
+
+    expected_roots = {name for name in declared_roots if not is_omitted(name, omissions)}
+
     actual_roots = present_roots(root)
-    for name in sorted(actual_roots - declared_roots):
+    for name in sorted(actual_roots - expected_roots):
         errors.append(f"undeclared numbered root: {name}")
-    for name in sorted(declared_roots - actual_roots):
+    for name in sorted(expected_roots - actual_roots):
         errors.append(f"missing declared root: {name}")
 
     for folder in sorted(declared_folders):
+        if is_omitted(folder, omissions):
+            continue
         if not (root / folder).is_dir():
             errors.append(f"missing declared folder: {folder}")
 
@@ -117,10 +178,14 @@ def main() -> int:
         return 1
 
     declared = json.loads((root / DECLARATION).read_text(encoding="utf-8"))
-    print(
+    omissions, _ = ({}, []) if args.strict else load_exceptions(root)
+    summary = (
         "folder structure verified: "
         f"{len(declared['roots'])} roots, {len(declared['folders'])} folders"
     )
+    if omissions:
+        summary += f", {len(omissions)} declared omission(s)"
+    print(summary)
     return 0
 
 
