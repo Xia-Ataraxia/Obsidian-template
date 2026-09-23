@@ -1,0 +1,16 @@
+name: verify
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify canonical folder structure
+        # --strict also proves the declaration never drifts from the tracked tree,
+        # which is what adopting vaults enforce against.
+        run: python3 scripts/verify_structure.py --strict
