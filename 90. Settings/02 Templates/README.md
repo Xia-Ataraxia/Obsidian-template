@@ -6,11 +6,11 @@ authorship: agent
 
 [English](README.md) · [한국어](README.ko.md)
 
-Related: [Start (English)](../../README.md) · [시작 (한국어)](../../README.ko.md) · [Placement Guide](../01%20Guideline/01.%20Placement%20Guide.md) · [배치 가이드](../01%20Guideline/01.%20Placement%20Guide.ko.md) · [Agent contract](AGENTS.md)
+Related: [Start (English)](../../README.md) · [시작 (한국어)](../../README.ko.md) · [Folders and Placement](../01%20Guideline/01.%20Folders%20and%20Placement.md) · [Agent contract](AGENTS.md)
 
 These are [Templater](https://github.com/SilentVoid13/Templater) templates. The `periodic-notes` plugin is not in this template's plugin ID list and is not used.
 
-`community-plugins.json` listing `templater-obsidian` (or Dataview, Excalidraw, Minimal Theme Settings) does **not** install those plugins. This vault ships allowlisted plugin **config** at `.obsidian/plugins/templater-obsidian/data.json` and `.obsidian/plugins/obsidian-excalidraw-plugin/data.json`. Those files are path and folder-template settings, not plugin binaries. `.obsidian/themes/` is not shipped. Install and enable Templater before any `<% %>` template will run.
+`community-plugins.json` listing an ID does **not** by itself install that plugin. This vault ships six plugin binaries (Templater, Homepage, Omnisearch, Excalidraw, Outliner, Linter) under `.obsidian/plugins/`. Extra IDs such as Dataview and Minimal Theme Settings remain configuration only. Allowlisted `data.json` files are path and folder-template settings, not a substitute for those binaries. `.obsidian/themes/` is not shipped. Enable Templater before any `<% %>` template will run.
 
 ## `auto/` versus `manual/`
 
@@ -171,4 +171,4 @@ Yearly notes have previous/next and quarter wikilinks only. No embedded Base.
 
 ## Drawings
 
-Excalidraw drawings and assets belong in `90. Settings/07 Excalidraw`, not in a Handbook and not as a Collections catalog. The allowlisted Excalidraw `data.json` is folder-path config (`folder`, library / script / font subpaths). Parent owns plugin path migration. Install the Excalidraw plugin before that config applies. This template does not ship Excalidraw binaries.
+Excalidraw drawings and assets belong in `90. Settings/07 Excalidraw`, not in a Handbook and not as a Collections catalog. The allowlisted Excalidraw `data.json` is folder-path config (`folder`, library / script / font subpaths). Parent owns plugin path migration. The Excalidraw plugin binary ships with this template; enable it before that config applies.

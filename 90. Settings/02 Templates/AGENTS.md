@@ -1,4 +1,5 @@
 ---
+type: note
 created_by: agent
 authorship: agent
 ---
@@ -8,7 +9,7 @@ authorship: agent
 
 ## Project Overview
 
-`02 Templates/` holds shipped Templater files for periodic Time notes (`auto/`) and on-demand insert (`manual/`). Inherit `../AGENTS.md` then `../../AGENTS.md`. Do not copy the ten-root table here.
+`02 Templates/` holds shipped Templater files for periodic Time notes (`auto/`), on-demand insert (`manual/`), and optional ZotLit Eta files (`zotero/`, ships empty). Inherit `../AGENTS.md` then `../../AGENTS.md`. Do not copy the twelve-root table here.
 
 `README.md` and `README.ko.md` are equivalent translations of one setup contract, not two note homes. Neither language outranks the other. When instructions change, update both files.
 
@@ -25,9 +26,10 @@ Wikilinks are navigation only; they do not create targets. After the Daily templ
 | Path | Role |
 | --- | --- |
 | `auto/` | Periodic files. Folder templates (except Dashboard) are preloaded in Templater `data.json`. |
-| `manual/` | On-demand insert (`note.template.md`, `task.template.md`, `project.template.md`, `log.template.md`, `video.template.md`, `book.template.md` via the Templater modal) |
+| `manual/` | On-demand insert (`note.template.md`, `task.template.md`, `project.template.md`, `log.template.md`, `video.template.md`, `book.template.md`, `guideline.template.md` via the Templater modal) |
+| `zotero/` | Optional ZotLit Eta templates. Ships empty. |
 
-Only `auto/` and `manual/` are Templater categories. `obsidian web clipper/video-clipper.json` is an import file for the Obsidian Web Clipper browser extension (copied from the instructor vault); it is not a Templater template and is not read by Templater. Do not invent extra Templater categories.
+Templater categories are `auto/`, `manual/`, and `zotero/` (`zotero/` is optional and ships empty). `obsidian web clipper/video-clipper.json` is an import file for the Obsidian Web Clipper browser extension (copied from the instructor vault); it is not a Templater template and is not read by Templater. Do not invent extra Templater categories.
 
 | Template | Folder | Title format | Folder template? |
 | --- | --- | --- | --- |
@@ -40,7 +42,7 @@ Only `auto/` and `manual/` are Templater categories. `obsidian web clipper/video
 
 If both a folder template and another applicator hit the same folder, Templater can run twice. Do not add a folder template on `10. Time/06 Dashboard`; dashboards created by the Daily hook would double-process.
 
-## Development Commands
+## Commands
 
 No template build, test, CLI-init, or git-init command exists; none is claimed to have run. Do not launch Obsidian to apply templates. Optional Git review belongs to the parent task. Do not edit `<% %>` bodies unless the assignment names those files.
 
@@ -59,9 +61,10 @@ Documented adopter commands (not executed here): command palette **Daily notes: 
 - `../../AGENTS.md` and `../AGENTS.md` — parent agent contracts.
 - `README.md` and `README.ko.md` — equivalent engine setup, folder mapping, navigation versus creation, example workflow.
 - `../../README.md` and `../../README.ko.md` — equivalent vault start guides.
-- `../01 Guideline/01. Placement Guide.md` and `01. Placement Guide.ko.md` — equivalent placement contracts.
+- `../01 Guideline/01. Folders and Placement.md` — placement contract.
 - `auto/Daily Note.template.md` — only shipped creator besides the opened note (dashboards for yesterday/today/tomorrow).
 - `auto/Dashboard.template.md` — applied by that Daily hook, not by a folder template.
+- `manual/guideline.template.md` — guideline insert.
 - `manual/note.template.md` — generic insert template (`date_created` / `date_modified` via `tp.date.now("YYYY-MM-DD")`).
 - `manual/task.template.md` — task insert whose fields match Dashboard Tasks.
 - `manual/project.template.md` and `manual/log.template.md` — minimal project hub and dated log inserts; no automatic creation or folder mapping. Link the adopter's reviewed `me` context, not a duplicate profile.
@@ -71,10 +74,10 @@ Documented adopter commands (not executed here): command palette **Daily notes: 
 
 ## Runtime/Tooling Preferences
 
-Install and enable Templater before `<% %>` runs. Folder location and the five period folder templates (not Dashboard) are preloaded; do not treat `data.json` as an installed plugin. `.obsidian/plugins/` holds allowlisted `data.json` files only; plugin binaries and `.obsidian/themes/` are not shipped. IDs and `cssTheme: Minimal` are not installations. Core Daily notes creates daily files only; the Daily hook creates dashboards once.
+Install and enable Templater before `<% %>` runs. Folder location and the five period folder templates (not Dashboard) are preloaded; do not treat `data.json` as an installed plugin. Six community plugins ship pre-installed as binaries (`main.js`, `manifest.json`, `styles.css`) under `.obsidian/plugins/`: Templater, Homepage, Omnisearch, Excalidraw, Outliner, Linter. IDs and `cssTheme: Minimal` are not extra installations. Core Daily notes creates daily files only; the Daily hook creates dashboards once.
 
 Drawings belong in `../07 Excalidraw` (`90. Settings/07 Excalidraw`). Excalidraw `data.json` is path config; parent owns plugin path migration. No Handbook.
 
 ## Testing & QA
 
-Check `auto/` versus `manual/`, title-format parsers, Daily dashboard-only creation (no period cascade), Dashboard **not** folder-mapped, navigation-only wikilinks, preserved Templater syntax and human provenance stamps, protected `## Thinking`, task fields matching Dashboard queries, bilingual README pair with no language precedence, config-versus-binary distinction for `.obsidian/plugins/`, drawings root `90. Settings/07 Excalidraw` with no stale Collections Excalidraw route, and no claim of a live Obsidian end-to-end run or package install from IDs or `data.json`.
+Check `auto/` versus `manual/` versus empty `zotero/`, title-format parsers, Daily dashboard-only creation (no period cascade), Dashboard **not** folder-mapped, navigation-only wikilinks, preserved Templater syntax and human provenance stamps, protected `## Thinking`, task fields matching Dashboard queries, bilingual README pair with no language precedence, six shipped plugin binaries under `.obsidian/plugins/`, drawings root `90. Settings/07 Excalidraw` with no stale Collections Excalidraw route, and no claim of a live Obsidian end-to-end run or package install from IDs or `data.json`.

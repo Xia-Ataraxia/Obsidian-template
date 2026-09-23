@@ -17,13 +17,15 @@ authorship: agent
     <img src="https://img.shields.io/badge/EN%20%7C%20KO-bilingual-1F6FEB?style=flat" alt="Bilingual English and Korean" />
   </p>
   <p>
-    <a href="90.%20Settings/01%20Guideline/01.%20Placement%20Guide.ko.md">배치</a>
+    <a href="90.%20Settings/01%20Guideline/01.%20Folders%20and%20Placement.md">배치</a>
     ·
-    <a href="90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.ko.md">글쓰기와 AI</a>
+    <a href="90.%20Settings/01%20Guideline/08.%20Writing%20and%20AI.ko.md">글쓰기와 AI</a>
     ·
     <a href="90.%20Settings/02%20Templates/README.ko.md">템플릿</a>
     ·
-    <a href="90.%20Settings/01%20Guideline/03.%20Agent%20Skills.ko.md">에이전트 스킬</a>
+    <a href="90.%20Settings/01%20Guideline/09.%20Agent%20Skills.ko.md">에이전트 스킬</a>
+    ·
+    <a href="90.%20Settings/01%20Guideline/">가이드라인</a>
     ·
     <a href="AGENTS.md">에이전트 가이드라인</a>
   </p>
@@ -42,10 +44,10 @@ authorship: agent
 
 | 기능 | 제공 |
 | --- | --- |
-| 번호 매긴 PARA 배치 | 루트 10개, 노트당 정식 경로 하나 |
+| 번호 매긴 PARA 배치 | 루트 12개, 노트당 정식 경로 하나 |
 | 제텔카스텐 구분 | 출처에서 나온 생각은 문헌 노트, 그 자체로 서는 아이디어는 영구 노트 |
 | 주기 계획 | 연·분기·월·주·일·대시보드용 Templater `auto/` 노트 |
-| 에이전트가 읽는 규칙 | 볼트 루트, Settings, Templates의 중첩 `AGENTS.md` |
+| 에이전트가 읽는 규칙 | 볼트 루트, Work, Literature Notes, Saint, Collections, Inbox Legacy, Settings, Templates의 중첩 `AGENTS.md` |
 | 임베디드 보기 | 주기 템플릿의 코어 Bases 표, 대시보드 Overdue는 Dataview 필요 |
 | 에이전트 스킬 | 포함된 `obsidian` 스킬 하나; Claude Code, Codex, Antigravity에서 모두 동작 |
 | 빈 자리 | 홈과 인덱스 폴더는 직접 채웁니다. `90. Settings/05 Bases`에는 예시 `Video.base`·`Books.base`가 있고, `85. Raw/02 Videos`에 실제 영상 노트 한 장이 있어 `Video.base`가 바로 카드 하나를 보여 줍니다. 루트 `Home.md`는 첫 목차이며 볼트를 열면 먼저 열립니다 |
@@ -56,21 +58,23 @@ authorship: agent
 
 **수집** (`00. Inbox`) → **원본** (`85. Raw`) · **해석** (`30. Literature Notes`) · **아이디어** (`40. Permanent Notes`) · **작업** (`15. Work`)
 
-누가 수집했든 원본은 Raw에 둡니다. 소유자가 있을 때만 프로젝트 또는 영역 아래에 작업을 만듭니다. 첫 노트를 두기 전에 [배치 가이드](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.ko.md)를 읽으십시오. 공개 AI 채팅으로 글을 쓸 때는 [글쓰기와 AI](90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.ko.md)를 보십시오.
+누가 수집했든 원본은 Raw에 둡니다. 소유자가 있을 때만 프로젝트 또는 영역 아래에 작업을 만듭니다. 첫 노트를 두기 전에 [폴더와 배치](90.%20Settings/01%20Guideline/01.%20Folders%20and%20Placement.md)를 읽으십시오. 공개 AI 채팅으로 글을 쓸 때는 [글쓰기와 AI](90.%20Settings/01%20Guideline/08.%20Writing%20and%20AI.ko.md)를 보십시오.
 
 ## 루트
 
-루트 10개를 제공합니다. 개인 볼트에만 있는 추가 루트는 이 템플릿의 일부가 아닙니다.
+루트 12개를 제공합니다. `25. Digital Garden`과 `60. Saint`는 빈 채로 포함됩니다.
 
 | 루트 | 역할 |
 | --- | --- |
 | `00. Inbox` | 미분류 캡처 |
 | `10. Time` | 일간, 주간, 월간, 분기, 연간, 대시보드 |
 | `15. Work` | 프로젝트, 영역, 아카이브, 할 일 |
+| `25. Digital Garden` | 정제된 발행용 노트 (빈 채로 포함) |
 | `30. Literature Notes` | 외부 자료에서 나온 연구, 리뷰, 회의 |
 | `40. Permanent Notes` | 그 자체로 서는 아이디어와 원칙 |
 | `50. AI` | 소유 프로젝트가 없는 AI 생성·합성 자료 |
-| `70. Collections` | 사람, 프롬프트, MoC, 음악, 장소, 조직, GitHub, 채널 |
+| `60. Saint` | 신앙과 영성 실천 (빈 채로 포함) |
+| `70. Collections` | 사람, 프롬프트, MoC, 음악, 장소, 조직, GitHub, 채널, 꽃 |
 | `80. References` | 책, 논문, 첨부 파일 |
 | `85. Raw` | 캡처한 외부 원본 |
 | `90. Settings` | 규칙, 템플릿, 홈, 인덱스, Bases, Excalidraw |
@@ -83,7 +87,7 @@ authorship: agent
 
 일간 제목은 `YYYY-MM-DD`입니다. 주간 제목은 ISO 주 연도 `GGGG-WW` 뒤에 `W`를 붙인 형식입니다(예: `2026-37W`). 주기 위키링크는 탐색용입니다. 일간 노트를 만들면 어제·오늘·내일의 빠진 대시보드를 만들 수 있고, 주·월·분기·연 노트는 만들지 않습니다.
 
-할 일 노트는 `manual/task.template.md`의 `type`, `done`, `gtd`, `project`, `plan`, `due` 필드(날짜 스탬프 포함)를 써서 대시보드 질의와 맞춥니다. 형식, ISO 주, 엔진 매핑, 그 필드: [배치 가이드](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.ko.md) · [템플릿](90.%20Settings/02%20Templates/README.ko.md) **엔진 설정**.
+할 일 노트는 `manual/task.template.md`의 `type`, `done`, `gtd`, `project`, `plan`, `due` 필드(날짜 스탬프 포함)를 써서 대시보드 질의와 맞춥니다. 형식, ISO 주, 엔진 매핑, 그 필드: [폴더와 배치](90.%20Settings/01%20Guideline/01.%20Folders%20and%20Placement.md) · [템플릿](90.%20Settings/02%20Templates/README.ko.md) **엔진 설정**.
 
 ## 시작하기
 
@@ -113,15 +117,15 @@ authorship: agent
 
 5. **수집한 뒤 배치**
 
-   먼저 [배치 가이드](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.ko.md)를 읽습니다. 미분류 캡처는 `00. Inbox`에 둡니다. 노트의 소유자가 있으면 `15. Work/01 Project` 또는 `15. Work/02 Area` 아래에 작업을 만듭니다. 시스템 파일은 `90. Settings`에 둡니다.
+   먼저 [폴더와 배치](90.%20Settings/01%20Guideline/01.%20Folders%20and%20Placement.md)를 읽습니다. 미분류 캡처는 `00. Inbox`에 둡니다. 노트의 소유자가 있으면 `15. Work/01 Project` 또는 `15. Work/02 Area` 아래에 작업을 만듭니다. 시스템 파일은 `90. Settings`에 둡니다.
 
 이 단계는 설정 안내입니다. 주기 노트 생성, Bases 보기, 테마 모양이 Obsidian에서 끝까지 검증되었다는 주장이 아닙니다.
 
 ## 첫 수업
 
-볼트를 연 뒤의 짧은 경로입니다. 자세한 내용: [글쓰기와 AI](90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.ko.md).
+볼트를 연 뒤의 짧은 경로입니다. 자세한 내용: [글쓰기와 AI](90.%20Settings/01%20Guideline/08.%20Writing%20and%20AI.ko.md).
 
-1. 쓰기 전에 [초보 문법](90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.ko.md#초보-문법)에서 Markdown 기본 여섯 가지와 짧은 예시를 읽습니다.
+1. 쓰기 전에 [초보 문법](90.%20Settings/01%20Guideline/08.%20Writing%20and%20AI.ko.md#초보-문법)에서 Markdown 기본 여섯 가지와 짧은 예시를 읽습니다.
 2. 볼트 루트의 [`Me.md`](Me.md)를 편집합니다. 다섯 개의 `##` 섹션으로 된 한 장의 워크시트입니다: **Summary Statement**(나는 누구이고 지금 무엇을 하는지), **First Principles**(내가 판단 기준으로 삼는 가치나 원칙), **How I Think**(언제, 어떻게 사고 방법을 쓰는지 — 상향식, 하향식, 첫 원칙 사고는 선택적 예시이지 정해진 단계나 고정된 신념이 아닙니다), **Working Preferences**(AI 가 나와 협업할 때 원하는 방식), **나에게 영향을 주는 사람**(나에게 영향을 준 사람의 이름만 — 에세이나 기본으로 채워진 이름은 없습니다). 정식 `Me` 노트는 이것 하나입니다. 일반적인 사실만 적으십시오. 비밀, 자격 증명, 기기 경로는 넣지 마십시오.
 
    각 섹션은 무엇을 적을지 알려주는 `> 역할:` 줄로 시작합니다. 그 아래에 자신의 답을 자기 말로 적으십시오. 섹션을 채운 뒤에는 프런트매터의 `authorship`을 `mixed`로 바꾸십시오(`created_by: agent`는 유지).
@@ -137,13 +141,36 @@ authorship: agent
 
 ## 에이전트 가이드라인
 
-노트를 만들거나 옮기기 전에 가장 가까운 계약을 읽으십시오. 사람용 가이드는 영어/한국어 쌍이며, 어느 언어도 다른 언어보다 우선하지 않습니다.
+노트를 만들거나 옮기기 전에 가장 가까운 계약을 읽으십시오. README, `08. Writing and AI`, `09. Agent Skills`는 영어/한국어 쌍이며, 어느 언어도 다른 언어보다 우선하지 않습니다. 운영 가이드 11개는 단일 언어입니다.
 
 | 계층 | 역할 |
 | --- | --- |
-| [볼트](AGENTS.md) | 루트 10개 지도와 볼트 전역 규칙 |
+| [볼트](AGENTS.md) | 루트 12개 지도와 볼트 전역 규칙 |
+| [Work](15.%20Work/AGENTS.md) | 프로젝트, 영역, 아카이브, 할 일 계약 |
+| [Literature Notes](30.%20Literature%20Notes/AGENTS.md) | 출처에서 나온 연구, 리뷰, 회의 |
+| [Saint](60.%20Saint/AGENTS.md) | 신앙과 영성 실천 노트 |
+| [Collections](70.%20Collections/AGENTS.md) | 사람, 프롬프트, MoC 등 카탈로그 객체 |
+| [Inbox Legacy](00.%20Inbox/09%20Legacy/AGENTS.md) | Inbox 아래 레거시 캡처 |
 | [Settings](90.%20Settings/AGENTS.md) | 배치 SSOT, 빈 홈/인덱스/Bases, 설정 계층 규칙 |
 | [Templates](90.%20Settings/02%20Templates/AGENTS.md) | `auto/`와 `manual/`, 제목 형식, 탐색과 생성 |
+
+## 가이드라인
+
+운영 가이드는 [`90. Settings/01 Guideline/`](90.%20Settings/01%20Guideline/)에 있습니다. 단일 언어입니다. 가이드 번호 `07`은 의도적으로 없습니다(기기별 내용).
+
+| 가이드 | 역할 |
+| --- | --- |
+| [00. Guideline Authoring](90.%20Settings/01%20Guideline/00.%20Guideline%20Authoring.md) | 가이드라인과 `AGENTS.md` 작성·갱신 |
+| [01. Folders and Placement](90.%20Settings/01%20Guideline/01.%20Folders%20and%20Placement.md) | 물리적 폴더 위치와 노트 배치 |
+| [02. Properties](90.%20Settings/01%20Guideline/02.%20Properties.md) | 프런트매터, 유형, 저작 표시 |
+| [03. Agent Permissions and Workflows](90.%20Settings/01%20Guideline/03.%20Agent%20Permissions%20and%20Workflows.md) | 구역, 권한, 작업 기록 |
+| [04. Applications and Integrations](90.%20Settings/01%20Guideline/04.%20Applications%20and%20Integrations.md) | 앱, 플러그인, Git, GitHub |
+| [05. Writing Style](90.%20Settings/01%20Guideline/05.%20Writing%20Style.md) | 문장과 Markdown 표현 |
+| [06. Knowledge Compile Guideline](90.%20Settings/01%20Guideline/06.%20Knowledge%20Compile%20Guideline.md) | 원문에서 위키·용어 컴파일 |
+| [12. DEVONthink Guideline](90.%20Settings/01%20Guideline/12.%20DEVONthink%20Guideline.md) | DEVONthink 아카이브와 캡처 라우팅 |
+| [15. Templates](90.%20Settings/01%20Guideline/15.%20Templates.md) | 템플릿 분류, 라우트, 엔진 |
+| [16. MOC](90.%20Settings/01%20Guideline/16.%20MOC.md) | Maps of Content와 노트 관계 |
+| [17. Research Evidence](90.%20Settings/01%20Guideline/17.%20Research%20Evidence.md) | 조사 노트의 근거 등급 |
 
 <details>
 <summary>플러그인, 테마, 설정 한계</summary>

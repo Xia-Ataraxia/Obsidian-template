@@ -32,6 +32,6 @@ Upstream also publishes 29 other engineering and research skills, plus native pl
 
 ## Scope
 
-These skills carry reusable Obsidian mechanics — how a Base, Canvas, or Mermaid block actually works. They do not decide where a note belongs or what it means. Placement stays with [`01. Placement Guide.md`](../../90.%20Settings/01%20Guideline/01.%20Placement%20Guide.md), writing and provenance with [`02. Writing and AI.md`](../../90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.md), and repository rules with [`AGENTS.md`](../../AGENTS.md). Where they disagree about this vault, the vault's own guides win.
+These skills carry reusable Obsidian mechanics — how a Base, Canvas, or Mermaid block actually works. They do not decide where a note belongs or what it means. Placement stays with [`01. Folders and Placement.md`](../../90.%20Settings/01%20Guideline/01.%20Folders%20and%20Placement.md), writing and provenance with [`08. Writing and AI.md`](../../90.%20Settings/01%20Guideline/08.%20Writing%20and%20AI.md), and repository rules with [`AGENTS.md`](../../AGENTS.md). Where they disagree about this vault, the vault's own guides win.
 
 The `obsidian` skill names optional prerequisites — `OBSIDIAN_VAULT_PATH`, an `obsidian-cli` binary, `ob` for headless Sync. The Markdown, Bases, Canvas, and Mermaid recipes need none of them; only the CLI and Sync recipes do. Nothing is installed by placing this folder here.

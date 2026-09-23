@@ -12,13 +12,15 @@
     <img src="https://img.shields.io/badge/EN%20%7C%20KO-bilingual-1F6FEB?style=flat" alt="Bilingual English and Korean" />
   </p>
   <p>
-    <a href="90.%20Settings/01%20Guideline/01.%20Placement%20Guide.md">Placement</a>
+    <a href="90.%20Settings/01%20Guideline/01.%20Folders%20and%20Placement.md">Placement</a>
     ·
-    <a href="90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.md">Writing and AI</a>
+    <a href="90.%20Settings/01%20Guideline/08.%20Writing%20and%20AI.md">Writing and AI</a>
     ·
     <a href="90.%20Settings/02%20Templates/README.md">Templates</a>
     ·
-    <a href="90.%20Settings/01%20Guideline/03.%20Agent%20Skills.md">Agent Skills</a>
+    <a href="90.%20Settings/01%20Guideline/09.%20Agent%20Skills.md">Agent Skills</a>
+    ·
+    <a href="90.%20Settings/01%20Guideline/">Guidelines</a>
     ·
     <a href="AGENTS.md">Agent guidelines</a>
   </p>
@@ -31,16 +33,16 @@ Start with a working structure, not someone else's personal notes. Download the 
 - **One home per note.** File by what the note is, not who wrote it or which tool captured it.
 - **PARA plus Zettelkasten.** Projects and areas stay separate from literature notes and evergreen ideas.
 - **A planning chain that matches review.** Folder numbers are labels; the hierarchy is the period chain.
-- **Portable on purpose.** Personal notes, credentials, plugin caches, plugin binaries, theme binaries, and machine-specific state are not included.
+- **Portable on purpose.** Personal notes, credentials, plugin caches, theme binaries, and machine-specific state are not included. Templater, Homepage, Omnisearch, Excalidraw, Outliner, and Linter ship as plugin binaries so they can be enabled after opening the vault and turning off Restricted Mode.
 
 ## Features
 
 | Feature | What you get |
 | --- | --- |
-| Numbered PARA layout | Ten roots; one canonical path per note |
+| Numbered PARA layout | Twelve roots; one canonical path per note |
 | Zettelkasten split | Source-derived thinking in Literature Notes; self-contained ideas in Permanent Notes |
 | Periodic planning | Templater `auto/` notes for year, quarter, month, week, day, and dashboards |
-| Agent-readable rules | Nested `AGENTS.md` at vault root, Settings, and Templates |
+| Agent-readable rules | Nested `AGENTS.md` at vault root, Work, Literature Notes, Saint, Collections, Inbox Legacy, Settings, and Templates |
 | Embedded views | Core Bases tables in period templates; Dashboard Overdue needs Dataview |
 | Agent Skills | One vendored `obsidian` skill; works in Claude Code, Codex, and Antigravity |
 | Empty placeholders | Home and index folders are yours to fill. `90. Settings/05 Bases` ships example `Video.base` and `Books.base`, and `85. Raw/02 Videos` ships one real video note so `Video.base` renders a card immediately. Root `Home.md` is your first table of contents and opens on startup |
@@ -51,21 +53,23 @@ This is a filing model, not an automatic pipeline. Nothing here moves notes for 
 
 **Capture** (`00. Inbox`) → **original** (`85. Raw`) · **interpretation** (`30. Literature Notes`) · **idea** (`40. Permanent Notes`) · **work** (`15. Work`)
 
-Keep captured originals in Raw regardless of collector. Create work under a project or area only when the note has an owner. Read the [Placement Guide](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.md) before filing the first note. For writing with a public AI chat, see [Writing and AI](90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.md).
+Keep captured originals in Raw regardless of collector. Create work under a project or area only when the note has an owner. Read [Folders and Placement](90.%20Settings/01%20Guideline/01.%20Folders%20and%20Placement.md) before filing the first note. For writing with a public AI chat, see [Writing and AI](90.%20Settings/01%20Guideline/08.%20Writing%20and%20AI.md).
 
 ## Roots
 
-Ten roots are shipped. Extra folders from a personal vault are not part of this template.
+Twelve roots are shipped. `25. Digital Garden` and `60. Saint` ship empty.
 
 | Root | Role |
 | --- | --- |
 | `00. Inbox` | Unsorted capture |
 | `10. Time` | Daily, weekly, monthly, quarterly, yearly, and dashboards |
 | `15. Work` | Projects, areas, archive, and tasks |
+| `25. Digital Garden` | Refined publishable notes (ships empty) |
 | `30. Literature Notes` | Research, reviews, and meetings derived from a source |
 | `40. Permanent Notes` | Ideas and principles that stand on their own |
 | `50. AI` | AI-generated or synthesized material with no owning project |
-| `70. Collections` | People, prompts, MOCs, music, places, organizations, GitHub, channels |
+| `60. Saint` | Faith and spiritual practice (ships empty) |
+| `70. Collections` | People, prompts, MOCs, music, places, organizations, GitHub, channels, flowers |
 | `80. References` | Books, papers, and attachments |
 | `85. Raw` | Captured external originals |
 | `90. Settings` | Rules, templates, home, indexes, bases, and Excalidraw drawings |
@@ -78,7 +82,7 @@ Planning hierarchy: **Year → Quarter → Month → Week → Day**. Folder numb
 
 Daily titles are `YYYY-MM-DD`. Weekly titles are ISO week year `GGGG-WW` plus `W` (example `2026-37W`). Period wikilinks are navigation only. Creating a daily note can create missing dashboards for yesterday, today, and tomorrow; it does not create week, month, quarter, or year notes.
 
-Task notes use `manual/task.template.md` fields `type`, `done`, `gtd`, `project`, `plan`, and `due` (plus date stamps) so Dashboard queries can match them. Formats, ISO weeks, engine mapping, and those fields: [Placement Guide](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.md) · [Templates](90.%20Settings/02%20Templates/README.md) **Engine setup**.
+Task notes use `manual/task.template.md` fields `type`, `done`, `gtd`, `project`, `plan`, and `due` (plus date stamps) so Dashboard queries can match them. Formats, ISO weeks, engine mapping, and those fields: [Folders and Placement](90.%20Settings/01%20Guideline/01.%20Folders%20and%20Placement.md) · [Templates](90.%20Settings/02%20Templates/README.md) **Engine setup**.
 
 ## Quick start
 
@@ -108,15 +112,15 @@ Task notes use `manual/task.template.md` fields `type`, `done`, `gtd`, `project`
 
 5. **Capture, then file**
 
-   Read the [Placement Guide](90.%20Settings/01%20Guideline/01.%20Placement%20Guide.md) first. Drop unsorted capture into `00. Inbox`. Create work under `15. Work/01 Project` or `15. Work/02 Area` when a note has an owner. Keep system files in `90. Settings`.
+   Read [Folders and Placement](90.%20Settings/01%20Guideline/01.%20Folders%20and%20Placement.md) first. Drop unsorted capture into `00. Inbox`. Create work under `15. Work/01 Project` or `15. Work/02 Area` when a note has an owner. Keep system files in `90. Settings`.
 
 These steps are setup instructions, not a claim that periodic creation, Bases views, or theme appearance were end-to-end verified in Obsidian.
 
 ## First lesson
 
-One short path after the vault is open. Details: [Writing and AI](90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.md).
+One short path after the vault is open. Details: [Writing and AI](90.%20Settings/01%20Guideline/08.%20Writing%20and%20AI.md).
 
-1. Before writing, read [Beginner syntax](90.%20Settings/01%20Guideline/02.%20Writing%20and%20AI.md#beginner-syntax): six Markdown basics and a tiny example.
+1. Before writing, read [Beginner syntax](90.%20Settings/01%20Guideline/08.%20Writing%20and%20AI.md#beginner-syntax): six Markdown basics and a tiny example.
 2. Edit [`Me.md`](Me.md) at the vault root. It is one worksheet with five `##` sections: **Summary Statement** (who you are, what you're doing now), **First Principles** (the values or judgment standards you use), **How I Think** (when and how you use thinking methods — bottom-up, top-down, and first-principles reasoning are optional examples, not prescribed steps or fixed beliefs), **Working Preferences** (how you want AI to collaborate with you), and **나에게 영향을 주는 사람** (names only of the people who influence you — no essays, no names supplied by default). It is the only canonical `Me` note. Use generic facts. Do not put secrets, credentials, or machine paths in it.
 
    Each section opens with a `> 역할:` line describing what to write. Write your answer underneath it, in your own words. After filling the sections in, set `authorship: mixed` in the frontmatter (keep `created_by: agent`).
@@ -132,13 +136,36 @@ Treat filled `Me.md` and any linked notes as private. They are **not automatical
 
 ## Agent guidelines
 
-Read the nearest contract before creating or moving a note. Human guides ship as English/Korean pairs; neither language outranks the other.
+Read the nearest contract before creating or moving a note. README, `08. Writing and AI`, and `09. Agent Skills` ship as English/Korean pairs; neither language outranks the other. The eleven operational guides are single-language.
 
 | Layer | Role |
 | --- | --- |
-| [Vault](AGENTS.md) | Ten-root map and vault-wide conventions |
+| [Vault](AGENTS.md) | Twelve-root map and vault-wide conventions |
+| [Work](15.%20Work/AGENTS.md) | Project, area, archive, and task contracts |
+| [Literature Notes](30.%20Literature%20Notes/AGENTS.md) | Source-derived research, reviews, and meetings |
+| [Saint](60.%20Saint/AGENTS.md) | Faith and spiritual-practice notes |
+| [Collections](70.%20Collections/AGENTS.md) | People, prompts, MOCs, and other catalog objects |
+| [Inbox Legacy](00.%20Inbox/09%20Legacy/AGENTS.md) | Legacy capture under Inbox |
 | [Settings](90.%20Settings/AGENTS.md) | Placement SSOT, empty home/index/bases, settings-layer rules |
 | [Templates](90.%20Settings/02%20Templates/AGENTS.md) | `auto/` vs `manual/`, title formats, navigation vs creation |
+
+## Guidelines
+
+Operational guides live in [`90. Settings/01 Guideline/`](90.%20Settings/01%20Guideline/). They are single-language. Guideline number `07` is intentionally absent (machine-specific).
+
+| Guide | Role |
+| --- | --- |
+| [00. Guideline Authoring](90.%20Settings/01%20Guideline/00.%20Guideline%20Authoring.md) | How to write and update guidelines and `AGENTS.md` |
+| [01. Folders and Placement](90.%20Settings/01%20Guideline/01.%20Folders%20and%20Placement.md) | Physical folder homes and note placement |
+| [02. Properties](90.%20Settings/01%20Guideline/02.%20Properties.md) | Frontmatter, types, and authorship |
+| [03. Agent Permissions and Workflows](90.%20Settings/01%20Guideline/03.%20Agent%20Permissions%20and%20Workflows.md) | Zones, authorization, and work records |
+| [04. Applications and Integrations](90.%20Settings/01%20Guideline/04.%20Applications%20and%20Integrations.md) | Apps, plugins, Git, and GitHub |
+| [05. Writing Style](90.%20Settings/01%20Guideline/05.%20Writing%20Style.md) | Prose and Markdown presentation |
+| [06. Knowledge Compile Guideline](90.%20Settings/01%20Guideline/06.%20Knowledge%20Compile%20Guideline.md) | Compiling wiki and terminology from sources |
+| [12. DEVONthink Guideline](90.%20Settings/01%20Guideline/12.%20DEVONthink%20Guideline.md) | DEVONthink archive and capture routing |
+| [15. Templates](90.%20Settings/01%20Guideline/15.%20Templates.md) | Template categories, routes, and engine |
+| [16. MOC](90.%20Settings/01%20Guideline/16.%20MOC.md) | Maps of Content and note relationships |
+| [17. Research Evidence](90.%20Settings/01%20Guideline/17.%20Research%20Evidence.md) | Evidence grades for research notes |
 
 <details>
 <summary>Plugins, theme, and setup limits</summary>

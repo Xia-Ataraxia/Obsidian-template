@@ -6,11 +6,11 @@ authorship: agent
 
 [English](README.md) · [한국어](README.ko.md)
 
-관련: [Start (English)](../../README.md) · [시작 (한국어)](../../README.ko.md) · [Placement Guide](../01%20Guideline/01.%20Placement%20Guide.md) · [배치 가이드](../01%20Guideline/01.%20Placement%20Guide.ko.md) · [Agent contract](AGENTS.md)
+관련: [Start (English)](../../README.md) · [시작 (한국어)](../../README.ko.md) · [Folders and Placement](../01%20Guideline/01.%20Folders%20and%20Placement.md) · [Agent contract](AGENTS.md)
 
 이들은 [Templater](https://github.com/SilentVoid13/Templater) 템플릿입니다. `periodic-notes` 플러그인은 이 템플릿의 플러그인 ID 목록에 없고 사용하지 않습니다.
 
-`community-plugins.json`에 `templater-obsidian`(또는 Dataview, Excalidraw, Minimal Theme Settings)이 적혀 있어도 그 플러그인을 **설치하지 않습니다**. 이 볼트는 `.obsidian/plugins/templater-obsidian/data.json`과 `.obsidian/plugins/obsidian-excalidraw-plugin/data.json`에 허용 목록 플러그인 **설정**을 포함합니다. 그 파일은 경로·폴더 템플릿 설정이며 플러그인 바이너리가 아닙니다. `.obsidian/themes/`는 포함되지 않습니다. `<% %>` 템플릿이 실행되려면 먼저 Templater를 설치하고 켜십시오.
+`community-plugins.json`에 ID가 적혀 있어도 그 플러그인을 설치한 것은 아닙니다. 이 볼트는 Templater · Homepage · Omnisearch · Excalidraw · Outliner · Linter 여섯 플러그인 바이너리를 `.obsidian/plugins/`에 포함합니다. Dataview와 Minimal Theme Settings 같은 추가 ID는 설정만 있습니다. 허용 목록 `data.json`은 경로·폴더 템플릿 설정이며 그 바이너리를 대신하지 않습니다. `.obsidian/themes/`는 포함되지 않습니다. `<% %>` 템플릿이 실행되려면 Templater를 켜십시오.
 
 ## `auto/`와 `manual/`
 
@@ -171,4 +171,4 @@ Dashboard를 제외한 모든 행의 Templater 폴더 템플릿은 미리 로드
 
 ## 그림
 
-Excalidraw 그림과 에셋은 `90. Settings/07 Excalidraw`에 둡니다. Handbook이 아니고 Collections 목록도 아닙니다. 허용 목록 Excalidraw `data.json`은 폴더 경로 설정입니다 (`folder`, 라이브러리·스크립트·폰트 하위 경로). 플러그인 경로 이전은 상위 작업이 맡습니다. 그 설정이 적용되려면 Excalidraw 플러그인을 설치하십시오. 이 템플릿은 Excalidraw 바이너리를 포함하지 않습니다.
+Excalidraw 그림과 에셋은 `90. Settings/07 Excalidraw`에 둡니다. Handbook이 아니고 Collections 목록도 아닙니다. 허용 목록 Excalidraw `data.json`은 폴더 경로 설정입니다 (`folder`, 라이브러리·스크립트·폰트 하위 경로). 플러그인 경로 이전은 상위 작업이 맡습니다. Excalidraw 플러그인 바이너리는 이 템플릿에 포함되어 있으며, 그 설정이 적용되려면 플러그인을 켜십시오.
