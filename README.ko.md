@@ -4,7 +4,7 @@ authorship: agent
 ---
 
 <div align="center">
-  <h1>Obsidian Template</h1>
+  <h1>Obsidian Vault Template</h1>
   <p><strong>노트에는 제자리를. 생각에는 연결을.</strong></p>
   <p>PARA의 정리, 제텔카스텐의 연결, 일상과 장기 계획까지 — 사람과 AI 에이전트가 함께 쓰는 Obsidian 템플릿.</p>
   <p>
@@ -31,7 +31,8 @@ authorship: agent
   </p>
 </div>
 
-## 정리에 쓰는 시간은 줄이고, 생각은 이어가세요
+## Features (기능)
+
 
 남의 개인 노트 대신, 바로 시작할 수 있는 구조를 가져오세요. ZIP을 받아 **새** 볼트로 폴더를 열고, 일반 마크다운부터 쓰면 됩니다. Git과 커뮤니티 플러그인은 필요할 때까지 선택 사항입니다. 노트마다 제자리를 정하고, 프로젝트를 넘어 아이디어를 연결하고, 연간 목표부터 오늘의 계획까지 이어갑니다. 사람과 에이전트가 같은 배치 규칙을 사용합니다.
 
@@ -40,7 +41,6 @@ authorship: agent
 - **회고 방식과 맞는 계획 사슬.** 폴더 번호는 이름표이고, 계층은 주기 사슬입니다.
 - **처음부터 휴대 가능하게.** 개인 노트, 자격 증명, 플러그인 캐시, 테마 바이너리, 기기별 상태는 포함하지 않습니다. Templater · Homepage · Omnisearch · Excalidraw · Outliner · Linter 여섯 플러그인은 바이너리로 미리 설치되어 있어, 볼트를 열고 제한 모드를 끄면 바로 켜집니다. 코어 Bases는 켜져 있고 Vim 모드는 꺼져 있습니다. 강사의 단축키(`.obsidian/hotkeys.json`)가 포함되어 있으며, 설정 → 단축키에서 바꿀 수 있습니다.
 
-## 기능
 
 | 기능 | 제공 |
 | --- | --- |
@@ -52,7 +52,7 @@ authorship: agent
 | 에이전트 스킬 | 포함된 `obsidian` 스킬 하나; Claude Code, Codex, Antigravity에서 모두 동작 |
 | 빈 자리 | 홈과 인덱스 폴더는 직접 채웁니다. `90. Settings/05 Bases`에는 예시 `Video.base`·`Books.base`가 있고, `85. Raw/02 Videos`에 실제 영상 노트 한 장이 있어 `Video.base`가 바로 카드 하나를 보여 줍니다. 루트 `Home.md`는 첫 목차이며 볼트를 열면 먼저 열립니다 |
 
-## 수집에서 작업까지
+### 수집에서 작업까지
 
 이것은 배치 모델이며 자동 파이프라인이 아닙니다. 노트를 옮겨 주지 않습니다. 웹의 Gemini는 이 볼트에 자동으로 접근하지 않습니다.
 
@@ -60,7 +60,7 @@ authorship: agent
 
 누가 수집했든 원본은 Raw에 둡니다. 소유자가 있을 때만 프로젝트 또는 영역 아래에 작업을 만듭니다. 첫 노트를 두기 전에 [폴더와 배치](90.%20Settings/01%20Guideline/01.%20Folders%20and%20Placement.md)를 읽으십시오. 공개 AI 채팅으로 글을 쓸 때는 [글쓰기와 AI](90.%20Settings/01%20Guideline/08.%20Writing%20and%20AI.ko.md)를 보십시오.
 
-## 루트
+### 루트
 
 루트 12개를 제공합니다. `25. Digital Garden`과 `60. Saint`는 빈 채로 포함됩니다.
 
@@ -81,7 +81,7 @@ authorship: agent
 
 `90. Settings/07 Excalidraw`는 그림과 에셋의 정규 폴더입니다.
 
-## 시간
+### 시간
 
 계획 계층은 **Year → Quarter → Month → Week → Day**입니다. 폴더 번호가 그 계층이 아닙니다.
 
@@ -89,7 +89,9 @@ authorship: agent
 
 할 일 노트는 `manual/task.template.md`의 `type`, `done`, `gtd`, `project`, `plan`, `due` 필드(날짜 스탬프 포함)를 써서 대시보드 질의와 맞춥니다. 형식, ISO 주, 엔진 매핑, 그 필드: [폴더와 배치](90.%20Settings/01%20Guideline/01.%20Folders%20and%20Placement.md) · [템플릿](90.%20Settings/02%20Templates/README.ko.md) **엔진 설정**.
 
-## 시작하기
+## Installation (설치)
+
+### 시작하기
 
 1. **ZIP 받기 (Git 불필요)**
 
@@ -102,7 +104,7 @@ authorship: agent
 2. **선택: Git으로 클론**
 
    ```sh
-   git clone https://github.com/GoBeromsu/Obsidian-template.git
+   git clone https://github.com/Xia-Ataraxia/obsidian-vault-template.git
    ```
 
    클론한 폴더를 같은 방식으로 새 볼트로 엽니다. 디렉터리를 복사해도 같습니다.
@@ -121,7 +123,9 @@ authorship: agent
 
 이 단계는 설정 안내입니다. 주기 노트 생성, Bases 보기, 테마 모양이 Obsidian에서 끝까지 검증되었다는 주장이 아닙니다.
 
-## 첫 수업
+## Usage (사용법)
+
+### 첫 수업
 
 볼트를 연 뒤의 짧은 경로입니다. 자세한 내용: [글쓰기와 AI](90.%20Settings/01%20Guideline/08.%20Writing%20and%20AI.ko.md).
 
@@ -135,11 +139,11 @@ authorship: agent
 
 채워 넣은 `Me.md`와 연결한 노트는 비공개로 취급하십시오. **Git이나 공유에서 자동 제외되지 않습니다.** 공개 저장소에 올리지 마십시오.
 
-### 파일 세 개, 역할 세 개
+#### 파일 세 개, 역할 세 개
 
 [`Me.md`](Me.md)는 한 사람으로서의 정체성과 선호를 담습니다. [`AGENTS.md`](AGENTS.md)는 이 저장소의 규칙을 담습니다. [`CLAUDE.md`](CLAUDE.md)는 이 두 파일을 가리키는 단순한 포인터이며, 어느 쪽 내용도 중복하지 않습니다. 에이전트는 사용자 맥락을 위해 루트 `Me.md`를 먼저 읽고, 그다음 해당하는 `AGENTS.md` 계약을 읽습니다. `Me.md`를 읽는다고 해서 자동 통합이나 확장된 권한이 생기지 않으며, 비어 있는 섹션은 채워지지 않은 알 수 없는 것이지 채택자에 대한 사실이 아닙니다.
 
-## 에이전트 가이드라인
+### 에이전트 가이드라인
 
 노트를 만들거나 옮기기 전에 가장 가까운 계약을 읽으십시오. README, `08. Writing and AI`, `09. Agent Skills`는 영어/한국어 쌍이며, 어느 언어도 다른 언어보다 우선하지 않습니다. 운영 가이드 11개는 단일 언어입니다.
 
@@ -154,7 +158,7 @@ authorship: agent
 | [Settings](90.%20Settings/AGENTS.md) | 배치 SSOT, 빈 홈/인덱스/Bases, 설정 계층 규칙 |
 | [Templates](90.%20Settings/02%20Templates/AGENTS.md) | `auto/`와 `manual/`, 제목 형식, 탐색과 생성 |
 
-## 가이드라인
+### 가이드라인
 
 운영 가이드는 [`90. Settings/01 Guideline/`](90.%20Settings/01%20Guideline/)에 있습니다. 단일 언어입니다. 가이드 번호 `07`은 의도적으로 없습니다(기기별 내용).
 
@@ -195,3 +199,16 @@ Excalidraw 그림은 `90. Settings/07 Excalidraw`에 둡니다. `.obsidian/plugi
 코어 Daily notes는 켜져 있으며 일간 파일만 만듭니다.
 
 </details>
+
+## Development (개발)
+
+`scripts/verify_structure.py` 는 볼트 폴더 구조를 다음 선언과 대조합니다: `90. Settings/04 Index/folder-structure.json` (의존성 없는 Python 3).
+
+```sh
+python3 scripts/verify_structure.py           # 채택 볼트 검사
+python3 scripts/verify_structure.py --strict  # 템플릿 자체 검사
+```
+
+## License (라이선스)
+
+이 저장소에는 아직 LICENSE 파일이 없습니다.
